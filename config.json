@@ -1,0 +1,12 @@
+[
+    {
+        "Username": "user",
+        "Password": "password",
+        "DomainRecord": "example.domain.com"
+    },
+    {
+        "Username": "user",
+        "Password": "password",
+        "DomainRecord": "exmaple2.domain.com"
+    }
+]
