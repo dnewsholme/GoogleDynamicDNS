@@ -4,4 +4,4 @@ WORKDIR /usr/src/app
 # Install app dependencies
 COPY src/* ./
 # Run Command
-CMD [ "powershell-preview", "GoogleDynamicDNS.ps1" ]
+CMD [ "pwsh.exe", "GoogleDynamicDNS.ps1" ]
