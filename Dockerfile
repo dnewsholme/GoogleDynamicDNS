@@ -4,5 +4,5 @@ WORKDIR /GoogleDynamicDNS
 # Install app dependencies
 COPY src/* ./
 # Run Command
-RUN Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+RUN pwsh.exe -Command "Set-ExecutionPolicy -ExecutionPolicy Unrestricted"
 CMD [ "pwsh.exe","./GoogleDynamicDNS.ps1" ]
