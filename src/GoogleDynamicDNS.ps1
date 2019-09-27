@@ -12,7 +12,7 @@ else {$frequency = 300 }
 Write-verbose "Checking for Environment Variables"
 if ("$ENV:GDNS*") {
     $config = [PSCustomObject]@{
-        Userame      = $ENV:GDNS_USERNAME
+        Username      = $ENV:GDNS_USERNAME
         password     = $ENV:GDNS_PASSWORD
         Domainrecord = $ENV:GNS_DOMAINRECORD
     }
