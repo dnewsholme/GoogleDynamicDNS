@@ -19,7 +19,7 @@ function Update-GoogleDynamicDNS {
         }
         Write-Verbose "[$(Get-Date -format G)] Updating Record"
         try {
-            $cred = New-Object System.Management.Automation.PSCredential -ArgumentList "$username", $($Password | ConvertTo-SecureString -AsPlainText -Force)
+            $cred = New-Object System.Management.Automation.PSCredential -ArgumentList "$username", $($password | ConvertTo-SecureString -AsPlainText -Force)
             $result = Invoke-RestMethod -method Post `
                 -Uri "https://domains.google.com/nic/update?hostname=$domainrecord&myip=$($ExternalIP)" `
                 -Authentication Basic `
