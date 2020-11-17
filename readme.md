@@ -13,17 +13,17 @@ Run as a scheduled task or via Cron.
 
 ```bash
 sudo docker pull dnewsholme/googledynamicdns:latest
-sudo docker run dnewsholme/googledynamicdns -e GDNS_USERNAME="jhksoo" -e GNS_PASSWORD="sokoks" -e GNS_DOMAINRECORD="dev.website.com" -e GNS_FREQUENCY="300"
+sudo docker run dnewsholme/googledynamicdns -e GDNS_USERNAME="jhksoo" -e GDNS_PASSWORD="sokoks" -e GDNS_DOMAINRECORD="dev.website.com" -e GDNS_FREQUENCY="300"
 ```
 
 Environment Variables
 
-| Name             | Setting                     | Example         |
-|------------------|-----------------------------|-----------------|
-| GDNS_USERNAME    | username                    | jhksoo          |
-| GNS_PASSWORD     | password                    | sokoks          |
-| GNS_DOMAINRECORD | Domain Name                 | dev.website.com |
-| GNS_FREQUENCY    | Update Frequency in seconds | 300             |
+| Name              | Setting                     | Example         |
+|-------------------|-----------------------------|-----------------|
+| GDNS_USERNAME     | username                    | jhksoo          |
+| GDNS_PASSWORD     | password                    | sokoks          |
+| GDNS_DOMAINRECORD | Domain Name                 | dev.website.com |
+| GDNS_FREQUENCY    | Update Frequency in seconds | 300             |
 
 #### Docker Compose
 
@@ -36,9 +36,9 @@ services:
     container_name: googledynamicdns
     environment:
       - GDNS_USERNAME= jhksoo
-      - GNS_PASSWORD= sokoks
-      - GNS_DOMAINRECORD= dev.website.com
-      - GNS_FREQUENCY=300
+      - GDNS_PASSWORD= sokoks
+      - GDNS_DOMAINRECORD= dev.website.com
+      - GDNS_FREQUENCY=300
     restart: unless-stopped
 ```
 

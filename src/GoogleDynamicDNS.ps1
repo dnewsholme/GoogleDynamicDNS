@@ -5,16 +5,16 @@ try {
 Catch {
     . .\Functions\Update-GoogleDynamicDNS.ps1 
 }
-if ($env:GDNS_FREQUENCY){
+if ($env:GDNS_FREQUENCY) {
     $frequency = $env:GDNS_FREQUENCY
 }
-else {$frequency = 300 }
+else { $frequency = 300 }
 Write-verbose "Checking for Environment Variables"
 if ("$ENV:GDNS*") {
     $config = [PSCustomObject]@{
-        Username      = $ENV:GDNS_USERNAME
+        Username     = $ENV:GDNS_USERNAME
         password     = $ENV:GDNS_PASSWORD
-        Domainrecord = $ENV:GNS_DOMAINRECORD
+        Domainrecord = $ENV:GDNS_DOMAINRECORD
     }
 }
 Else {
@@ -22,7 +22,7 @@ Else {
     $config = Get-Content $psscriptroot\config\config.json | ConvertFrom-Json
 }
 Write-Verbose "[$(Get-Date -format G)] Starting Dynamic DNS Update"
-While ($loop -ne $false){
+While ($loop -ne $false) {
     $config | Update-GoogleDynamicDNS
     Start-Sleep -Seconds $frequency
 }
