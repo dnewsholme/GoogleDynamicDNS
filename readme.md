@@ -13,7 +13,7 @@ Run as a scheduled task or via Cron.
 
 ```bash
 sudo docker pull dnewsholme/googledynamicdns:latest
-sudo docker run dnewsholme/googledynamicdns -e GDNS_USERNAME="jhksoo" -e GDNS_PASSWORD="sokoks" -e GDNS_DOMAINRECORD="dev.website.com" -e GDNS_FREQUENCY="300"
+sudo docker run -e GDNS_USERNAME="jhksoo" -e GDNS_PASSWORD="sokoks" -e GDNS_DOMAINRECORD="dev.website.com" -e GDNS_FREQUENCY="300" dnewsholme/googledynamicdns
 ```
 
 Environment Variables
