@@ -6,7 +6,8 @@ function Update-GoogleDynamicDNS {
         [parameter(ValueFromPipelineByPropertyName)]$domainrecord
     )
     begin {
-
+     Add-Type -AssemblyName System.Web
+     $domainrecord = [System.Web.HttpUtility]::UrlEncode($domainrecord) 
     }
     Process {
         try {
