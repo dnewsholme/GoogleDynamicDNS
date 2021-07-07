@@ -31,7 +31,7 @@ Environment Variables
 ---
 version: "2"
 services:
-  sonarr:
+  googledynamicdns:
     image: dnewsholme/googledynamicdns
     container_name: googledynamicdns
     environment:
