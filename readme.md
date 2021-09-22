@@ -1,4 +1,5 @@
 # Google Dynamic DNS Updater
+[![Docker](https://github.com/dnewsholme/GoogleDynamicDNS/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/dnewsholme/GoogleDynamicDNS/actions/workflows/docker-publish.yml)
 
 ![GoogleDomains](https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2015/01/google-domains-730x349.png)
 
